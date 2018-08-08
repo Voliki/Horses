@@ -7,7 +7,7 @@ class Header extends React.Component<any, any> {
       <header className='col-12'>
         <div className='row'>
           <div className='col-4'>
-            <Link to='/' ><h1 className=''>Horses</h1></Link>
+            <h1><Link to='/' className='header-brand'>Horses</Link></h1>
           </div>
           <div className='col-4'>
             <div className='row'>
