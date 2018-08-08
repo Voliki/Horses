@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component<any, any> {
   render() {
@@ -6,7 +7,7 @@ class Header extends React.Component<any, any> {
       <header className='col-12'>
         <div className='row'>
           <div className='col-4'>
-            <h1 className='H1'>Horses</h1>
+            <Link to='/' ><h1 className=''>Horses</h1></Link>
           </div>
           <div className='col-4'>
             <div className='row'>

@@ -13,7 +13,7 @@ import { initialState } from './reducers/initialState';
 
 const history = createBrowserHistory();
 
-const middleware = routerMiddleware(history);
+const _routerMiddleware = routerMiddleware(history);
 
 const store = createStore(
   createReducer({}),
@@ -21,7 +21,7 @@ const store = createStore(
   composeWithDevTools(
     applyMiddleware(
       thunk,
-      middleware
+      _routerMiddleware
     )
   )
 );

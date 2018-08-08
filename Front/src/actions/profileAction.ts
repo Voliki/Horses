@@ -1,7 +1,7 @@
 import { getProfile } from '../services/profileService';
 
-export const changeParamsHorseAction = (faield: string, value: any) => (dispatch: Function) => {
-  dispatch(changeParamsHorseObj(faield, value));
+export const changeParamsHorseAction = (field: string, value: any) => (dispatch: Function) => {
+  dispatch(changeParamsHorseObj(field, value));
 };
 
 export const getHorseProfileAction = (id: number) => (dispatch: Function) => {
@@ -14,10 +14,20 @@ export const getHorseProfileAction = (id: number) => (dispatch: Function) => {
     });
 };
 
-function changeParamsHorseObj(faield: string, value: any): Object {
-  return {type: 'CHANGE_PARAMS_HORSE', ...{faield, value} };
+export const changeProfileHorseAction = (field: string, value: any) => (dispatch: Function) => {
+  dispatch(changeProfileHorseObj(field, value));
+};
+
+/*---------------------Object Actions------------------------------------------*/
+
+function changeParamsHorseObj(field: string, value: any): Object {
+  return {type: 'CHANGE_PARAMS_HORSE', ...{field, value} };
 };
 
 function getHorseObj(horse: any): Object {
   return {type: 'GET_HORSE_PROFILE', horse };
+};
+
+function changeProfileHorseObj(field: string, value: any): Object {
+  return {type: 'CHANGE_PROFILE_HORSE', ...{field, value} };
 };

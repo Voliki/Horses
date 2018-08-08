@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
 import Header from './header';
-import HorseProfileContainer from './componentContainers/horseProdileContainer';
+import HorseProfileContainer from './componentContainers/horseProfileContainer';
 
 export class App extends React.Component<any, any> {
   constructor(props: any){

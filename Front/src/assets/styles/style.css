@@ -6,6 +6,10 @@ html, body{
     min-height: 100%;
 }
 
+.cursor-pointer{
+    cursor: pointer;
+}
+
 header {
     background: rgb(233, 184, 139);
     border: 1px solid black;
@@ -63,6 +67,10 @@ header {
     height: 30px;
 }
 
+.profile-horse-params-input-number{
+    width: 65px;
+}
+
 .profile-bottom-block{
     margin: 30px 0px 10px 0px;
     max-height: 500px;
@@ -86,6 +94,215 @@ header {
     margin-top: 0px;
 }
 
-.element-edit:hover{
+.element-edit{
     cursor: pointer;
+    height: 16px;
+}
+
+.element-edit-div{
+    height: 16px;
+    width: 16px;
+}
+
+.profile-params-overflow{
+    overflow: hidden;
+}
+
+.profile-params-text-overflow{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-change-photo{
+    position: absolute;
+    left: 70px;
+    top: 220px;
+    height: 30px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.profile-textarea-max-height{
+    resize: none;
+    height: 100px;
+}
+
+.profile-save-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+/* filter */
+/* .filter-container{
+    display: grid;
+    grid-gap: 10px;
+        grid-template-columns: repeat(6, 1fr);
+}
+.filter-range-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-range{
+    width: 100px;
+}
+.filter-label{
+    width: 100px;
+} */
+ .filter-container{
+    border: 1px solid black;
+    margin: 10px 5px 5px 5px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+     "row1_Name" "row1_Sex" "row1_Color" "row1_Id" "row1_Age" "row1_Aplly" "row1_Clear"
+     "row2_Type" "row2_Skulder" "row2_Forlemmer" "row2_Skridt" "row2_Galop"
+     "row3_Hoved" "row3_Overlinie" "row3_Baglemmer" "row3_Trav" "row3_Breeding";   
+}
+
+.cell-padding-10px{
+    padding: 10px;
+}
+
+.row1-name{grid-area: row1_Name;} .row1-sex{grid-area: row1_Sex;} .row1-color{grid-area: row1_Color;}
+.row1-id{grid-area: row1_Id;} .row1-age{grid-area: row1_Age;} .row1-aplly{grid-area: row1_Aplly;} .row1-clear{grid-area: row1_Clear;}
+
+.row2-type{grid-area: row2_Type;} .row2-skulder{grid-area: row2_Skulder;} .row2-forlemmer{grid-area: row2_Forlemmer;}
+.row2-skridt{grid-area: row2_Skridt;} .row2-galop{grid-area: row2_Galop;}
+
+.row3-hoved{grid-area: row3_Hoved;} .row3-overlinie{grid-area: row3_Overlinie;} .row3-baglemmer{grid-area: row3_Baglemmer;}
+.row3-trav{grid-area: row3_Trav;} .row3-breeding {grid-area: row3_Breeding;}
+
+.filter-range-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.filter-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.filter-range{
+    width: 100px;
+}
+.filter-label{
+    width: 100px;
+}
+
+/** media for filters*/
+/* @media (min-width: 850px) {
+    .filter-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "row1_Name row1_Name row1_Sex" 
+        "row1_Id row1_Id row1_Color" 
+        "row1_Age row2_Type row2_Skulder"
+        "row2_Forlemmer row2_Skridt row2_Galop" 
+        "row3_Hoved row3_Overlinie row3_Baglemmer" 
+        "row3_Trav row3_Breeding row1_Clear"
+        "row1_Aplly row1_Aplly row1_Aplly"
+    }
+} */
+
+@media (min-width: 850px) {
+    .filter-container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        "row1_Name row1_Name row1_Sex row1_Sex" 
+        "row1_Id row1_Id row1_Color row1_Color" 
+        "row1_Age row1_Age row2_Type row2_Type" 
+        "row2_Skulder row2_Skulder row2_Forlemmer row2_Forlemmer" 
+        "row2_Skridt row2_Skridt row2_Galop row2_Galop" 
+        "row3_Hoved row3_Hoved row3_Overlinie row3_Overlinie" 
+        "row3_Baglemmer row3_Baglemmer row3_Trav row3_Trav" 
+        "row3_Breeding row3_Breeding row1_Aplly row1_Clear"
+    }
+}
+
+/* @media (min-width: 1000px) {
+    .filter-container{
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas:
+        "row1_Name row1_Name row1_Sex row1_Color row1_Id row1_Id row1_Age row1_Age row1_Aplly row1_Clear"
+        "row2_Type row2_Type row2_Skulder row2_Skulder row2_Forlemmer row2_Forlemmer row2_Skridt row2_Skridt row2_Galop row2_Galop"
+        "row3_Hoved row3_Hoved row3_Overlinie row3_Overlinie row3_Baglemmer row3_Baglemmer row3_Trav row3_Trav row3_Breeding row3_Breeding";
+    }
+} */
+
+@media (min-width: 1450px) {
+    .filter-container{
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas:
+        "row1_Name row1_Name row1_Sex row1_Color row1_Id row1_Id row1_Age row1_Age row1_Aplly row1_Clear"
+        "row2_Type row2_Type row2_Skulder row2_Skulder row2_Forlemmer row2_Forlemmer row2_Skridt row2_Skridt row2_Galop row2_Galop"
+        "row3_Hoved row3_Hoved row3_Overlinie row3_Overlinie row3_Baglemmer row3_Baglemmer row3_Trav row3_Trav row3_Breeding row3_Breeding";
+    }
+}
+
+/* @media (min-width: 1450px) {
+    .filter-container{
+        grid-template-columns: repeat(15, 1fr);
+        grid-template-areas:
+        "row1_Name row1_Name row1_Name row1_Sex row1_Color row1_Color row1_Id row1_Id row1_Id row1_Age row1_Age row1_Age row1_Aplly row1_Aplly row1_Clear"
+        "row2_Type row2_Type row2_Type row2_Skulder row2_Skulder row2_Skulder row2_Forlemmer row2_Forlemmer row2_Forlemmer row2_Skridt row2_Skridt row2_Skridt row2_Galop row2_Galop row2_Galop"
+        "row3_Hoved row3_Hoved row3_Hoved row3_Overlinie row3_Overlinie row3_Overlinie row3_Baglemmer row3_Baglemmer row3_Baglemmer row3_Trav row3_Trav row3_Trav row3_Breeding row3_Breeding row3_Breeding";
+    }
+}  */
+
+@media (min-width: 2000px) {
+    .filter-container{
+        grid-template-columns: repeat(15, 1fr);
+        grid-template-areas:
+        "row1_Name row1_Name row1_Name row1_Sex row1_Color row1_Color row1_Id row1_Id row1_Id row1_Age row1_Age row1_Age row1_Aplly row1_Aplly row1_Clear"
+        "row2_Type row2_Type row2_Type row2_Skulder row2_Skulder row2_Skulder row2_Forlemmer row2_Forlemmer row2_Forlemmer row2_Skridt row2_Skridt row2_Skridt row2_Galop row2_Galop row2_Galop"
+        "row3_Hoved row3_Hoved row3_Hoved row3_Overlinie row3_Overlinie row3_Overlinie row3_Baglemmer row3_Baglemmer row3_Baglemmer row3_Trav row3_Trav row3_Trav row3_Breeding row3_Breeding row3_Breeding";
+    }
+} 
+
+/** profile horse in list*/
+
+.profile-list-container{
+    height: 250px;
+    width: 800px;
+}
+
+.profile-list-container-top{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 800px;
+    border: 1px solid black;
+}
+
+.profile-list-link-container{
+    display: flex;
+
+}
+
+.profile-list-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.profile-list-image{
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+}
+
+/**list*/
+.list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
 }
