@@ -11,12 +11,19 @@ html, body{
 }
 
 header {
-    background: rgb(233, 184, 139);
     border: 1px solid black;
 }
 
 .header-block {
     margin-top: 40%;
+}
+
+.header-brand{
+    color: black !important;
+}
+
+.header-brand:hover{
+    text-decoration: none;
 }
 
 .profile-block {
@@ -193,6 +200,10 @@ header {
 }
 .filter-label{
     width: 100px;
+}
+
+.filter-range-value{
+    width: 40px;
 }
 
 /** media for filters*/

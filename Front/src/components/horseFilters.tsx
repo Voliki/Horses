@@ -63,7 +63,7 @@ export default class HorseFilters extends React.Component<any, any> {
   }
 
   handle = (props: any) => {
-    const { value, dragging, index, ...restProps } = props;
+    const { value, dragging, index, ...restProps } = props;  
     return (
       <Tooltip
         prefixCls="rc-slider-tooltip"
@@ -100,7 +100,7 @@ export default class HorseFilters extends React.Component<any, any> {
                 }}
               />
             </div>
-            <div>
+            <div className='filter-range-value'>
               {`${min}-${max}`}
             </div>
           </div>
@@ -169,7 +169,7 @@ export default class HorseFilters extends React.Component<any, any> {
                 }}
               />
             </div>
-            <div>
+            <div className='filter-range-value'>
               {`${this.props.filters.age[0]}-${this.props.filters.age[1]}`}
             </div>
           </div>
