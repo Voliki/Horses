@@ -1,0 +1,62 @@
+export const listHorse = [
+  {
+    urlAvatar: '',
+    id: 1,
+    name: 'Luba',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    paramsHorse: {
+      age: 2,
+      sex: 'w',
+      id: 'h4fd56gh4',
+      type: 5,
+      hoved: 7,
+      skulder: 8,
+      overlinie: 10,
+      forlemmer: 10,
+      baglemmer: 5,
+      skridt: 3,
+      trav: 7,
+      galop: 5,
+    }
+  },
+  {
+    id: 2,
+    urlAvatar: '',
+    name: 'Mymau',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    paramsHorse: {
+      age: 3,
+      sex: 'm',
+      id: '4kug9i4b',
+      type: 5,
+      hoved: 7,
+      skulder: 8,
+      overlinie: 10,
+      forlemmer: 10,
+      baglemmer: 5,
+      skridt: 3,
+      trav: 7,
+      galop: 5,
+    }
+  },
+  {
+    id: 3,
+    urlAvatar: '',
+    name: 'Wokatumba',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    paramsHorse: {
+      age: 2,
+      sex: 'w',
+      id: 'oiu841gbf',
+      type: 5,
+      hoved: 7,
+      skulder: 8,
+      overlinie: 4,
+      forlemmer: 10,
+      baglemmer: 5,
+      skridt: 3,
+      trav: 7,
+      galop: 5,
+    }
+  },
+];

@@ -11,6 +11,7 @@ export class ListOfRoutes extends React.Component<any, any>{
   renderRoutes = () => {
     let component:any = null;
 
+    this.props.mapComponent
     component = <Route 
       path={this.props.location.pathname} 
       exact={this.props.mapComponent[this.props.location.pathname].exact || false}
