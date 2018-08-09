@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { v4 as uuidV4 } from 'uuid';
+import { Link } from 'react-router-dom';
 
 import { ProfileHorseInList } from './forms/listHorse';
 
-export class HorseList extends React.Component<any, any> {
+export class FindAPairList extends React.Component<any, any> {
 
   renderProfileHorses = () => {
     const element = this.props.listHorse.horses.map((item: any, index: number) => {
@@ -13,7 +14,8 @@ export class HorseList extends React.Component<any, any> {
           horse={this.props.listHorse.horses[index]}
           listParametrsHorse={this.props.listHorse.listParametrsHorse}
           renderLinks={this.props.renderLinks}
-          profileHorseContainerClass={'profile-list-container'}
+          profileHorseContainerClass={'faind-profile-list-container'}
+          selectProfile={this.props.handleRedirect}
         />
       );
     });
@@ -23,12 +25,8 @@ export class HorseList extends React.Component<any, any> {
 
   render() {
     return (
-      <div className='list-container'>
+      <div className='faind-list-container'>
         {this.renderProfileHorses()}
-        {/* <ProfileHorseInList 
-          listHorse={this.props.listHorse}
-          changeParams={this.props.changeParams}
-        /> */}
       </div>
     );
   }

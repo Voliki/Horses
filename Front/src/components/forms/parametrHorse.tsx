@@ -113,7 +113,7 @@ export class ParametrHorse extends React.Component<any, any> {
       );
     } else {
       return (
-        <div className='col-6 profile-horse-params'>
+        <div className={this.props.containerClass || 'col-6 profile-horse-params'}>
           <label
             className='col-7'
           >

@@ -23,16 +23,17 @@ const initialState: any = {
     galop: 5,
   },
   listParametrsHorse: [...listParametrsHorse],
+  isProfileLoaded: false,
 };
 
 export function profileReducer(state = initialState, action: any) {
   let stateObject: any = {
-    'CHANGE_PARAMS_HORSE': changeParamsHorse(state, action),
-    'GET_HORSE_PROFILE': getHorseProfile(state, action),
-    'CHANGE_PROFILE_HORSE': changeProfileHorse(state, action),
+    'CHANGE_PARAMS_HORSE': () => changeParamsHorse(state, action),
+    'GET_HORSE_PROFILE': () => getHorseProfile(state, action),
+    'CHANGE_PROFILE_HORSE': () => changeProfileHorse(state, action),
   };
 
-  return stateObject.hasOwnProperty(action.type) ? stateObject[action.type] : state;
+  return stateObject.hasOwnProperty(action.type) ? stateObject[action.type]() : state;
 };
 
 function changeParamsHorse(state: any, action: any) {
@@ -43,7 +44,10 @@ function changeParamsHorse(state: any, action: any) {
 
 function getHorseProfile(state: any, action: any) {
   let newState = state;
-  newState = action.horse;
+  newState = {
+    ...action.horse,
+    isProfileLoaded: true,
+  };
   return Object.assign({}, state, newState);
 };
 
