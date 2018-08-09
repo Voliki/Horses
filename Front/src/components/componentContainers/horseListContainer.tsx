@@ -2,9 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Header from '../header';
 import { HorseList } from '../horseList';
-import HorseFiltersContainer from './horseFiltersContainer';
 import { getListHorseAction } from '../../actions/listHorseAction';
 
 class HorseListContainer extends React.Component<any, any> {
@@ -14,25 +12,15 @@ class HorseListContainer extends React.Component<any, any> {
   }
 
   render() {
-    return (
-      <div>
-        <Header />
-        <div>
-          <HorseFiltersContainer />
-        </div>
-        {this.props.listHorse.horses && this.props.listHorse.horses.length > 0 ?
-          <div>
-            <HorseList
-              listHorse={this.props.listHorse}
-              listParametrsHorse={this.props.listParametrsHorse}
-              changeParams={() => { }}
-            />
-          </div>
-          :
-          null
-        }
-      </div>
-    );
+    return this.props.listHorse.horses && this.props.listHorse.horses.length > 0 ?
+      <HorseList
+        listHorse={this.props.listHorse}
+        listParametrsHorse={this.props.listParametrsHorse}
+        changeParams={() => { }}
+        renderLinks={this.props.renderLinks}
+      />
+      :
+      null;
   }
 }
 

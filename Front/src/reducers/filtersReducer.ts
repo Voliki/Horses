@@ -18,10 +18,10 @@ const initialState: any = {
 
 export function filtersReducer(state = initialState, action: any) {
   let stateObject: any = {
-    'CHANGE_FILTERS': changeFilterSlider(state, action)
+    'CHANGE_FILTERS': () => changeFilterSlider(state, action)
   };
 
-  return stateObject.hasOwnProperty(action.type) ? stateObject[action.type] : state;
+  return stateObject.hasOwnProperty(action.type) ? stateObject[action.type]() : state;
 };
 
 function changeFilterSlider(state: any, action: any) {

@@ -1,9 +1,9 @@
 import { get } from './httpService';
 
-import { listHorse } from '../../mock/listHorse';
+import { profile } from '../../mock/profileMock';
 
 export const getListHorse = () => {
   return new Promise((resolve, reject) => {
-    resolve(listHorse);
+    resolve(profile);
   });
 };

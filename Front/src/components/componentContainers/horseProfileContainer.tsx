@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { HorseProfile } from '../horseProfile';
-import Header from '../header';
 import {
   changeParamsHorseAction,
   getHorseProfileAction,
@@ -33,7 +32,6 @@ class HorseProfileContainer extends React.Component<any, any> {
   render() {
     return (
       <div>
-        <Header />
         <HorseProfile
           paramsHorse={mockParams}
           profile={this.props.profile}

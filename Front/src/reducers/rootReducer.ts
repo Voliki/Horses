@@ -5,6 +5,7 @@ import { appReducer } from './appReducer';
 import { profileReducer } from './profileReducer';
 import { filtersReducer } from './filtersReducer';
 import { listHorseReducer } from './listHorseReducer';
+import { resultOfCrossingReducer } from './resultOfCrossingReducer';
 
 export default function createReducer(injectedReducers: any) {
   return combineReducers({
@@ -13,6 +14,7 @@ export default function createReducer(injectedReducers: any) {
     profile: profileReducer,
     filters: filtersReducer,
     listHorse: listHorseReducer,
+    resultOfCrossing: resultOfCrossingReducer,
     ...injectedReducers,
   });
 };

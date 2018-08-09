@@ -7,10 +7,10 @@ const initialState: any = {
 
 export function listHorseReducer(state = initialState, action: any) {
   let stateObject: any = {
-    'GET_LIST_HORSE': getListHorse(state, action)
+    'GET_LIST_HORSE': () => getListHorse(state, action)
   };
 
-  return stateObject.hasOwnProperty(action.type) ? stateObject[action.type] : state;
+  return stateObject.hasOwnProperty(action.type) ? stateObject[action.type]() : state;
 };
 
 function getListHorse(state: any, action: any) {

@@ -63,7 +63,7 @@ export default class HorseFilters extends React.Component<any, any> {
   }
 
   handle = (props: any) => {
-    const { value, dragging, index, ...restProps } = props;  
+    const { value, dragging, index, ...restProps } = props;
     return (
       <Tooltip
         prefixCls="rc-slider-tooltip"
@@ -174,6 +174,9 @@ export default class HorseFilters extends React.Component<any, any> {
             </div>
           </div>
         </div>
+        {this.renderSlider()}
+        <div>
+        </div>
         <div className='row1-aplly cell-padding-10px'>
           <div className='filter-button-container'>
             <button
@@ -183,19 +186,16 @@ export default class HorseFilters extends React.Component<any, any> {
               Apply Filters
           </button>
           </div>
-        </div>
-        <div className='row1-clear cell-padding-10px'>
           <div className='filter-button-container'>
             <button
               className='btn'
               onClick={this.applyFilters}
             >
               Clear
-          </button>
+            </button>
           </div>
         </div>
-
-        {this.renderSlider()}
+        
       </div>
     );
   }

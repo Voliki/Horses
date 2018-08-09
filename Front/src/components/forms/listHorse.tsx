@@ -5,6 +5,14 @@ import { ParametrHorse } from './parametrHorse';
 
 export class ProfileHorseInList extends React.Component<any, any> {
 
+  handleClick = (e: any) => {
+    e.preventDefault();
+    if(typeof this.props.selectProfile === 'function') {
+      this.props.selectProfile(this.props.horse.id);
+    }
+
+  }
+
   renderParamsHorse = (): any => {
     const element = this.props.listParametrsHorse.map((item: any, index: number) => {
       let type = 'number';
@@ -13,7 +21,7 @@ export class ProfileHorseInList extends React.Component<any, any> {
       } else if (item === 'Id') {
         type = 'text';
       }
-
+      
       return (
         <ParametrHorse
           key={index}
@@ -30,12 +38,15 @@ export class ProfileHorseInList extends React.Component<any, any> {
 
   render() {
     return (
-      <div className='profile-list-container'>
+      <div 
+        className={this.props.profileHorseContainerClass}
+        onClick={this.handleClick}
+      >
         <div className='profile-list-container-top'>
           <div className='col-3'>
             <img
               className='profile-list-image'
-              src={this.props.horse.urlAvatar || '../assets/images/default-Image.png'}
+              src={'/assets/images/default-Image.png'}
               width='100%'
             />
           </div>
@@ -51,14 +62,18 @@ export class ProfileHorseInList extends React.Component<any, any> {
             {this.renderParamsHorse()}
           </div>
         </div>
-        <div className='profile-list-link-container'>
-          <div className='col-6 profile-list-link'>
-            <Link to={`/profile/${this.props.horse.id}`} >View full profile</Link>
+        {this.props.renderLinks ? (
+          <div className='profile-list-link-container'>
+            <div className='col-6 profile-list-link'>
+              <Link to={`/profile/${this.props.horse.id}`} >View full profile</Link>
+            </div>
+            <div className='col-6 profile-list-link'>
+              <Link to={`/findapair/${this.props.horse.id}`} >Find a pair</Link>
+            </div>
           </div>
-          <div className='col-6 profile-list-link'>
-            <Link to="/" >Find a pair</Link>
-          </div>
-        </div>
+        ) :
+          null
+        }
       </div>
     );
   }
