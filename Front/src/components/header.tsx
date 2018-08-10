@@ -41,7 +41,6 @@ class Header extends React.Component<any, any> {
             </div>
           </div>
         </header>
-        {this.props.children}
       </div>
     );
   }

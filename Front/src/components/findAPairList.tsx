@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { v4 as uuidV4 } from 'uuid';
-import { Link } from 'react-router-dom';
 
 import { ProfileHorseInList } from './forms/listHorse';
 
@@ -11,11 +10,12 @@ export class FindAPairList extends React.Component<any, any> {
       return (
         <ProfileHorseInList
           key={uuidV4()}
-          horse={this.props.listHorse.horses[index]}
+          horse={item}
           listParametrsHorse={this.props.listHorse.listParametrsHorse}
           renderLinks={this.props.renderLinks}
-          profileHorseContainerClass={'faind-profile-list-container'}
-          selectProfile={this.props.handleRedirect}
+          profileHorseContainerClass={`faind-profile-list-container ${item.id === Number(this.props.idTwoHorse)? 'faind-profile-list-container-selected' : ''}`}
+          urlLink={true}
+          idOneHorse={this.props.idOneHorse}
         />
       );
     });

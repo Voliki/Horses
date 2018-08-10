@@ -7,7 +7,6 @@ import FindAPairContainer from '../componentContainers/findAPairContainer';
 import ResultOfCrossingHorsesContainer from '../componentContainers/resultOfCrossingHorsesContainer';
 
 export function FindAPairBuild(props: any): any {
-  console.log("props", props)
   return (
     <div>
       <Header />
@@ -22,6 +21,7 @@ export function FindAPairBuild(props: any): any {
           <FindAPairListContainer 
             urlPath={props.match.url}
             idOneHorse={props.match.params.idOne}
+            idTwoHorse={props.match.params.idTwo}
           />
         </div>
         <div className='find-a-pair-build-container-width-100-result'>
