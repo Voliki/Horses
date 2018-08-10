@@ -24,7 +24,17 @@ const initialState: any = {
       galop: 5,
     },
   },
-  listParametrsHorse: [...listParametrsHorse],
+  listParametrsHorse: [
+    'Type',
+    'Hoved',
+    'Skulder',
+    'Overlinie',
+    'Forlemmer',
+    'Baglemmer',
+    'Skridt',
+    'Trav',
+    'Galop'
+  ],
   isProfileLoaded: false,
 };
 

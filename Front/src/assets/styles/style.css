@@ -12,7 +12,7 @@ html, body{
 
 header {
     border: 1px solid black;
-    min-width: 870px;
+    min-width: 1280px;
 }
 
 .header-block {
@@ -44,6 +44,7 @@ header {
 }
 
 .profile-top-block{
+    position: relative;
     margin: 10px 0px 10px 0px;
 }
 
@@ -125,8 +126,8 @@ header {
 
 .profile-change-photo{
     position: absolute;
-    left: 70px;
-    top: 220px;
+    left: 50px;
+    top: 210px;
     height: 30px;
     padding: 3px;
     cursor: pointer;
@@ -140,37 +141,10 @@ header {
 .profile-save-button-container{
     display: flex;
     justify-content: center;
-}
-
-/* filter */
-/* .filter-container{
-    display: grid;
-    grid-gap: 10px;
-        grid-template-columns: repeat(6, 1fr);
-}
-.filter-range-container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.filter-range{
-    width: 100px;
-}
-.filter-label{
-    width: 100px;
-} */
- /* .filter-container{
+    align-items: center;
     border: 1px solid black;
-    margin: 10px 5px 5px 5px;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-areas:
-     "row1_Name" "row1_Sex" "row1_Color" "row1_Id" "row1_Age" "row1_Aplly" "row1_Clear"
-     "row2_Type" "row2_Skulder" "row2_Forlemmer" "row2_Skridt" "row2_Galop"
-     "row3_Hoved" "row3_Overlinie" "row3_Baglemmer" "row3_Trav" "row3_Breeding";   
-} */
-
-
+    height: 100px;
+}
 
 .cell-padding-10px{
     padding: 10px;
@@ -191,80 +165,42 @@ header {
     align-items: center;
 }
 
-/* .row1-name{grid-area: row1_Name;} 
-.row1-sex{grid-area: row1_Sex;} 
-.row1-color{grid-area: row1_Color;}
-.row1-id{grid-area: row1_Id;} 
-.row1-age{grid-area: row1_Age; width: 270px;} .row1-aplly{grid-area: row1_Aplly;} .row1-clear{grid-area: row1_Clear;}
-
-.row2-type{grid-area: row2_Type;} .row2-skulder{grid-area: row2_Skulder;} .row2-forlemmer{grid-area: row2_Forlemmer;}
-.row2-skridt{grid-area: row2_Skridt;} .row2-galop{grid-area: row2_Galop;}
-
-.row3-hoved{grid-area: row3_Hoved;} .row3-overlinie{grid-area: row3_Overlinie;} .row3-baglemmer{grid-area: row3_Baglemmer;}
-.row3-trav{grid-area: row3_Trav;} .row3-breeding {grid-area: row3_Breeding;} */
-
-@media (max-width: 1000px) {
-
-    .filter-container{
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .filter-range-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        width: 270px;
-    }
-
-    .filter-range{
-        width: 100px;
-    }
+.filter-container{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 1280px;
 }
 
-@media (min-width: 1000px) {
-
-    .filter-container{
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .filter-range-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        width: 300px;
-    }
-
-    .filter-range{
-        width: 100px;
-    }
+.filter-range-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 400px;
 }
 
-@media (min-width: 1200px) {
-
-    .filter-container{
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .filter-range-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        width: 350px;
-    }
-
-    .filter-range{
-        width: 150px;
-    }
+.filter-range{
+    width: 200px;
 }
+
+.filter-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0px 10px 0px 10px;
+}
+
+.filter-label{
+    width: 100px;
+}
+
+.filter-range-value{
+    width: 40px;
+}
+
+/** media for filters*/
 
 @media (min-width: 1400px) {
 
@@ -307,93 +243,6 @@ header {
         width: 300px;
     }
 }
-
-.filter-button-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin: 0px 10px 0px 10px;
-}
-
-.filter-label{
-    width: 100px;
-}
-
-.filter-range-value{
-    width: 40px;
-}
-
-/** media for filters*/
-/* @media (min-width: 850px) {
-    .filter-container{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-        "row1_Name row1_Name row1_Sex" 
-        "row1_Id row1_Id row1_Color" 
-        "row1_Age row2_Type row2_Skulder"
-        "row2_Forlemmer row2_Skridt row2_Galop" 
-        "row3_Hoved row3_Overlinie row3_Baglemmer" 
-        "row3_Trav row3_Breeding row1_Clear"
-        "row1_Aplly row1_Aplly row1_Aplly"
-    }
-} */
-/* 
-@media (min-width: 850px) {
-    .filter-container{
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-        "row1_Name row1_Name row1_Sex row1_Sex" 
-        "row1_Id row1_Id row1_Color row1_Color" 
-        "row1_Age row1_Age row2_Type row2_Type" 
-        "row2_Skulder row2_Skulder row2_Forlemmer row2_Forlemmer" 
-        "row2_Skridt row2_Skridt row2_Galop row2_Galop" 
-        "row3_Hoved row3_Hoved row3_Overlinie row3_Overlinie" 
-        "row3_Baglemmer row3_Baglemmer row3_Trav row3_Trav" 
-        "row3_Breeding row3_Breeding row3_Breeding row3_Breeding"
-        "row1_Aplly row1_Aplly row1_Clear row1_Clear"
-    }
-} */
-
-/* @media (min-width: 1000px) {
-    .filter-container{
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-areas:
-        "row1_Name row1_Name row1_Sex row1_Color row1_Id row1_Id row1_Age row1_Age row1_Aplly row1_Clear"
-        "row2_Type row2_Type row2_Skulder row2_Skulder row2_Forlemmer row2_Forlemmer row2_Skridt row2_Skridt row2_Galop row2_Galop"
-        "row3_Hoved row3_Hoved row3_Overlinie row3_Overlinie row3_Baglemmer row3_Baglemmer row3_Trav row3_Trav row3_Breeding row3_Breeding";
-    } 
-} */
-/* 
-@media (min-width: 1450px) {
-    .filter-container{
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-areas:
-        "row1_Name row1_Name row1_Sex row1_Color row1_Id row1_Id row1_Age row1_Age row1_Aplly row1_Clear"
-        "row2_Type row2_Type row2_Skulder row2_Skulder row2_Forlemmer row2_Forlemmer row2_Skridt row2_Skridt row2_Galop row2_Galop"
-        "row3_Hoved row3_Hoved row3_Overlinie row3_Overlinie row3_Baglemmer row3_Baglemmer row3_Trav row3_Trav row3_Breeding row3_Breeding";
-    }
-} */
-
-/* @media (min-width: 1450px) {
-    .filter-container{
-        grid-template-columns: repeat(15, 1fr);
-        grid-template-areas:
-        "row1_Name row1_Name row1_Name row1_Sex row1_Color row1_Color row1_Id row1_Id row1_Id row1_Age row1_Age row1_Age row1_Aplly row1_Aplly row1_Clear"
-        "row2_Type row2_Type row2_Type row2_Skulder row2_Skulder row2_Skulder row2_Forlemmer row2_Forlemmer row2_Forlemmer row2_Skridt row2_Skridt row2_Skridt row2_Galop row2_Galop row2_Galop"
-        "row3_Hoved row3_Hoved row3_Hoved row3_Overlinie row3_Overlinie row3_Overlinie row3_Baglemmer row3_Baglemmer row3_Baglemmer row3_Trav row3_Trav row3_Trav row3_Breeding row3_Breeding row3_Breeding";
-    }
-}  */
-/* 
-@media (min-width: 2000px) {
-    .filter-container{
-        grid-template-columns: repeat(15, 1fr);
-        grid-template-areas:
-        "row1_Name row1_Name row1_Name row1_Sex row1_Color row1_Color row1_Id row1_Id row1_Id row1_Age row1_Age row1_Age row1_Aplly row1_Aplly row1_Clear"
-        "row2_Type row2_Type row2_Type row2_Skulder row2_Skulder row2_Skulder row2_Forlemmer row2_Forlemmer row2_Forlemmer row2_Skridt row2_Skridt row2_Skridt row2_Galop row2_Galop row2_Galop"
-        "row3_Hoved row3_Hoved row3_Hoved row3_Overlinie row3_Overlinie row3_Overlinie row3_Baglemmer row3_Baglemmer row3_Baglemmer row3_Trav row3_Trav row3_Trav row3_Breeding row3_Breeding row3_Breeding";
-    }
-}  */
 
 /** profile horse in list*/
 
@@ -474,10 +323,15 @@ header {
 
 .faind-profile-list-container:hover{
     cursor: pointer;
+    background: rgba(192, 114, 25, 0.267);
 }
 
 .faind-profile-list-container{
     width: 800px;
     height: 200px;
     margin-bottom: 10px;
+}
+
+.faind-profile-list-container-selected{
+    background: rgba(224, 129, 19, 0.39);
 }
